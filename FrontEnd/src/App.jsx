@@ -1,7 +1,10 @@
 import "./App.css";
+import LoginForm from "./components/LoginForm/LoginForm";
 
 function App() {
-  return <></>;
+  return <>
+  <LoginForm />
+  </>;
 }
 
 export default App;
