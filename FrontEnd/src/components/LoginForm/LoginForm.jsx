@@ -6,10 +6,17 @@ function LoginForm() {
     <>
         <form className="loginForm">
           <label htmlFor="email">
-            <input type="email" name="email" id="email" placeholder="Email" />
+            <input
+              type="email"
+              name="email"
+              className="textInput"
+              id="email"
+              placeholder="Email"
+            />
           </label>
           <label htmlFor="password">
             <input
+              className="textInput"
               type="password"
               name="password"
               id="password"
