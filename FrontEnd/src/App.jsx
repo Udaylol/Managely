@@ -1,7 +1,14 @@
 import "./App.css";
+import Auth from "./components/Auth/Auth";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <div>
+        <Auth />
+      </div>
+    </>
+  );
 }
 
 export default App;

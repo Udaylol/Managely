@@ -1,0 +1,52 @@
+/* Outer container */
+.authContainer {
+  width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Toggle buttons */
+.employeeBtn,
+.adminBtn {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+
+.employeeBtn {
+  background: #4a90e2;
+  color: white;
+  margin-right: 10px;
+}
+
+.adminBtn {
+  background: #4a90e2;
+  color: white;
+}
+
+.employeeBtn:hover {
+  background: #3a78c2;
+}
+
+.adminBtn:hover {
+  background: #3a78c2;
+}
+
+.formContainer {
+  margin-top: 10px;
+}
