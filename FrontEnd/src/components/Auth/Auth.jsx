@@ -9,8 +9,17 @@ function Auth() {
     <>
       <div className="authContainer">
         <div className="header">
-          <button className="employeeBtn" onClick={() => setLoginType("employee")}>Employee Login</button>
-          <button className="adminBtn" onClick={() => setLoginType("admin")}>Admin Login</button>
+          <button className={`employeeBtn ${loginType === "employee" ? "selected" : ""}`}
+            onClick={() => setLoginType("employee")}
+          >
+            Employee Login
+          </button>
+          <button
+            className={`adminBtn ${loginType === "admin" ? "selected" : ""}`}
+            onClick={() => setLoginType("admin")}
+          >
+            Admin Login
+          </button>
         </div>
 
         <div className="formContainer">
