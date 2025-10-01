@@ -8,9 +8,16 @@ function LoginForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("form submitted");
+    const userData = { email, password };
     console.log(email);
     console.log(password);
+    axios.post("http://localhost:3000/auth/admin", userData)
+    .then((res)=>{
+      console.log("LOGIN SUCCESSFUL");
+    })
+    .catch((err) => {
+      console.error("LOGIN FAILED");
+    });
   };
 
   return (
