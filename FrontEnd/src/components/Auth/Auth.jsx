@@ -1,6 +1,5 @@
-import React from "react";
-import "./Auth.css";
 import LoginForm from "../LoginForm/LoginForm";
+import "./Auth.css";
 
 function Auth() {
   return (
