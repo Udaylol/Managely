@@ -1,10 +1,7 @@
-const express = require("express");
-const router = express.Router();
-
 const admins = require("../admins.json");
 const employees = require("../employees.json");
 
-router.get("/manage", (req, res) => {
+function getAllAdmins(res) {
   if (admins) {
     return res
       .status(200)
@@ -14,10 +11,9 @@ router.get("/manage", (req, res) => {
       .status(401)
       .json({ message: "Failed to fetch admins", success: false });
   }
-});
+}
 
-router.get("/manage/id/:id", (req, res) => {
-  const id = parseInt(req.params.id);
+function getAdminById(id, res) {
   const admin = admins.find((a) => a.id === id);
   if (admin) {
     res.status(200).json({
@@ -31,10 +27,9 @@ router.get("/manage/id/:id", (req, res) => {
       success: false,
     });
   }
-});
+}
 
-router.get("/manage/email", (req, res) => {
-  const email = req.query.email;
+function getAdminByEmail(email, res) {
   const admin = admins.find((a) => a.email === email);
   if (admin) {
     res.status(200).json({
@@ -48,6 +43,6 @@ router.get("/manage/email", (req, res) => {
       success: false,
     });
   }
-});
+}
 
-module.exports = router;
+module.exports = { getAdminById, getAdminByEmail , getAllAdmins };

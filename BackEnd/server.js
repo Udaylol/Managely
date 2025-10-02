@@ -3,9 +3,9 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT;
-const authRoutes = require("./routes/auth");
-const adminRoutes = require("./routes/admin");
-const employeeRoutes = require("./routes/employee");
+const authRoutes = require("./routes/authRoutes");
+const adminRoutes = require("./routes/adminRoutes");
+const employeeRoutes = require("./routes/employeeRoutes");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
