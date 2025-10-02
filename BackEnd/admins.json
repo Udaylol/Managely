@@ -1,13 +1,16 @@
 [
   {
+    "id": 1,
     "email": "admin1@gmail.com",
     "password": "pass1"
   },
   {
+    "id": 2,
     "email": "admin2@gmail.com",
     "password": "pass2"
   },
   {
+    "id": 3,
     "email": "admin3@gmail.com",
     "password": "pass3"
   }
