@@ -13,3 +13,26 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model admin_login {
+  id Int @id @default(autoincrement())
+
+  name String?
+
+  email String @unique
+
+  password String?
+
+  created_at DateTime @default(now())
+}
+model employee_login {
+  id Int @id @default(autoincrement())
+
+  name String?
+
+  email String @unique
+
+  password String?
+
+  created_at DateTime @default(now())
+}

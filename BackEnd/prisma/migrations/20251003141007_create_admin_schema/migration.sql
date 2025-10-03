@@ -1,3 +1,4 @@
+-- CreateTable
 CREATE TABLE "admin_login" (
     "id" SERIAL NOT NULL,
     "name" TEXT,
@@ -8,11 +9,5 @@ CREATE TABLE "admin_login" (
     CONSTRAINT "admin_login_pkey" PRIMARY KEY ("id")
 );
 
-INSERT INTO admin_login (name, email, password) VALUES
-('admin1', 'admin1@gmail.com', 'pass1'),
-('admin2', 'admin2@gmail.com', 'pass2'),
-('admin3', 'admin3@gmail.com', 'pass3');
-
-SELECT * FROM admin_login;
-
-DROP TABLE IF EXISTS admin_login;
+-- CreateIndex
+CREATE UNIQUE INDEX "admin_login_email_key" ON "admin_login"("email");

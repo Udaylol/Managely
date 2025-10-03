@@ -1,8 +1,11 @@
-CREATE TABLE IF NOT EXISTS employee_login (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL
+CREATE TABLE "employee_login" (
+    "id" SERIAL NOT NULL,
+    "name" TEXT,
+    "email" TEXT NOT NULL,
+    "password" TEXT,
+    "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "employee_login_pkey" PRIMARY KEY ("id")
 );
 
 INSERT INTO employee_login (id, name, email, password) VALUES
