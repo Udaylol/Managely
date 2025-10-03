@@ -45,4 +45,4 @@ function getAdminByEmail(email, res) {
   }
 }
 
-module.exports = { getAdminById, getAdminByEmail , getAllAdmins };
+module.exports = { getAdminById, getAdminByEmail, getAllAdmins };
